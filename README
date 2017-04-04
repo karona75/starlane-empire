@@ -1,0 +1,25 @@
+
+
+starlane empire README file
+=================================
+
+starlane empire is a space turn by turn strategy game engine
+whose goal is to emulate and extend the old "ascendancy" dos game.
+
+for now, the original ascendancy cd is needed to test the engine.
+
+Instructions relative to game installation
+are in the INSTALL file.
+
+Ok and now for the greetings:
+
+thanks to all the biew developpers (http://biew.sourceforge.net)
+thanks to www.wotsit.org for some help on .shp files
+
+because of these people the reverse enginnering has been done entirely
+under linux :)
+
+if you have questions / want to help, contact me.
+
+E-mail: tracker at mozenix.org
+

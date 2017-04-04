@@ -1,0 +1,99 @@
+
+this file contains some quick (and dirty) description of ascendancy's
+original game file formats. some part of it is written in french
+as most of my brain was focused on something else than english at the time
+I wrote it.
+
+************
+*.cob file:*
+************
+
+first int => num of files
+
+then
+
+num files char[50] => names of files
+
+then 
+
+num files int => offset
+
+then 
+
+datas
+
+********************
+*.shp or .tmp file:*
+********************
+
+first int => control for type, is always 312E3130 
+second int => number of images
+
+then
+
+num adresses in long ints => offset
+
+then 
+
+datas
+
+***************************
+*files inside .shp or .tmp*
+***************************
+int int => ???
+int => décal vertical (baisse => haut) 
+int => décal horiz (baisse => gauche)
+=> décalage / position de base (translate l'image)
+int int => taille ?? découpage à la moitié de l'image si = 0
+
+data: 1 octet = 1 pixel sur palette + compression ?
+
+
+00: fin de ligne
+01: char:delta
+
+autre valeur N en contrôle:
+N pair => N/2 "char" pixels
+N impair => (N-1)/2 pixels différents avant prochain contrôle
+
+
+
+*****
+.pal*
+*****
+
+RVB RVB RVB RVB ..... (ou BRV BRV BRV....) :)
+game.pal: 256 couleurs
+
+******
+*.haz*
+******
+
+256 indices de couleurs ??
+
+réorganisation par gradients ???
+
+******
+*.fnt*
+******
+
+4 mots : 312E0000 : contrôle ??
+	80000000 : ???
+	mot : largeur d'un char
+	FF : couleurs ????
+
+128 mots : xx xx 00 00
+32 mots : 00 00 00 00
+
+î____________ palette
+
+96 fois: ( 
+	mot: hauteur
+	hauteur * largeur mots : entrée palette
+	)
+
+
+*********************
+TODO: .bin .tsv .dll :)
+
+

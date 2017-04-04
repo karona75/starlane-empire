@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StarLaneSettings>
+	<font>
+		<bigfont>ikarus.ttf</bigfont>
+		<bigsize>9</bigsize>
+		<smallfont>ikarus.ttf</smallfont>
+		<smallsize>6</smallsize>
+	</font>
+	<tileset>
+		<current>starlane/</current>>
+		<default>ascendancy/</default>
+		<path>../themes/</path>
+	</tileset>
+	<lang>
+		<current>german/</current>>
+		<default>english/</default>
+		<path>../themes/starlane/data/lang/</path>
+	</lang>
+
+</StarLaneSettings>

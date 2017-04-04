@@ -1,0 +1,54 @@
+
+this explain how to install starlane empire using the original ascendancy cd.
+
+ok, so you're now ready to install
+
+so first be warned that it's not yet playable
+
+now, what do you need ?
+
+some programs :
+- sox
+- oggenc
+- resample (optional, http://www-ccrma.stanford.edu/~jos/resample/), increase sound quality
+- g++, make, and other standard development stuff
+- doxygen (only to generate documentation)
+
+some libs with their development files : 
+- libpng12
+- libxml2
+- lua version 5
+- SDL, SDL-image, SDL-mixer, SDL-ttf
+
+these programs / libs are standard within linux and should be included in you distribution
+
+
+now, how to proceed:
+
+step 1 : extract all data from the original game
+
+- fasten your seatbelt
+- enter parser subdirectory
+- type "make" to compile the ascendancy parser
+- put your ascendancy cdrom in the drive and mount it
+- if your cdrom is not mounted on /cdrom you need to edit the convert.sh script
+and change lines 9 to 11 to reflect the good path to the .cob files
+- run "convert.sh", this will extract all images, musics, videos and sounds
+from the cdrom. you won't need the cdrom any further after that.
+
+step 2 : over to the exciting new engine 
+
+- go to the "source" subdirectory
+- type "make"
+
+step 3 : start fiddling with the beast
+
+- go to the "themes" subdirectory
+- link the "ascend" directory from the "parser" subdirectory here
+- go to the "source"
+- type "./ascend" to run the game
+- type "doxygen" to generate the documentation
+
+
+well done :)
+

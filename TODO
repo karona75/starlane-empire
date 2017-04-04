@@ -1,0 +1,5 @@
+
+- settings engine documentation is bad
+- change static paths in se::rename into paths extracted from settings file
+- add a text_container instead of using image_container for text
+this will enable to store color and attributes like "multiline" "alignement", etc...
