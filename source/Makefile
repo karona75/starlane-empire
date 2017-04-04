@@ -4,7 +4,7 @@ CFLAGS = -Wall -O1 -g -I/usr/include/lua5.2 `xml2-config --cflags` `sdl-config -
 CC = g++
 
 starlane-empire:	$(OBJS)
-	$(CC) $(OBJS) $(CFLAGS) -o starlane-empire `sdl-config --libs` -lSDL_image -lSDL_mixer -llualib50 -llua50 -lm -lSDL_ttf `xml2-config --libs` -lGL -lGLU  -L/usr/include
+	$(CC) $(OBJS) $(CFLAGS) -o starlane-empire `sdl-config --libs` -lSDL_image -lSDL_mixer -llua  -lm -lSDL_ttf `xml2-config --libs` -lGL -lGLU  -L/usr/include
 $(OBJS):	%.o:	%.cc
 	$(CC) -c $<  $(CFLAGS)
 clean:	
